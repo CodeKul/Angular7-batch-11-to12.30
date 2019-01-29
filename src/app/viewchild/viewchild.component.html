@@ -1,0 +1,24 @@
+<h1>view child</h1>
+<div class="row">
+  <div class="col-md-12">
+    <input type ="text" #nm>
+    <input type="button" value="ok" (click)="clickBtn(nm.value)">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h1>{{val}}</h1>
+  </div>
+</div>
+<h1>content child</h1>
+<div class="row">
+  <div class="col-md-12">
+    <app-contentchild>
+
+      <div class="alert alert-danger" role="alert" #al>
+        This is a danger alert—check it out!
+      </div>
+
+    </app-contentchild>
+  </div>
+</div>

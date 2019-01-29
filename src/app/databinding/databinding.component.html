@@ -1,0 +1,55 @@
+<div class="container">
+  <!-- <div class="row">
+    <h1>Interpolation Binding </h1>
+    <div class="col-md-12">
+
+      <div class="alert alert-info">welcome to {{name}}</div>
+      <div class="alert alert-info">welcome to {{name.toUpperCase()}}</div>
+      <div class="alert alert-info">welcome to {{amt* 5}}</div>
+      <div class="alert alert-info"> {{greetMe()}}, Angular 7 batch</div>
+      <div class="alert alert-info"> {{name.length}}</div>
+      <input type="{{type}}" class="{{cls}}" value="codekul">
+
+      <h1>Property Binding []</h1>
+      <div>
+        <input type="text" value="codekul">
+      </div>
+      <div>
+        <input [disabled]="isDisabled" type="text" value="codekul">
+      </div>
+      <div>
+        <input type="text" value="codekul" [id]="myId">
+      </div>
+      <div>
+        <input [class.jumbotron]="false" type="text" value="Angular7">
+      </div>
+      <div>
+        <input [style.border]="'2px solid red'" type="text" value="Angular7">
+      </div>
+      <h2 [style.color]="hasError ? 'red': 'green'">styling </h2>
+      <h1>Event Binding ()</h1>
+      <input type="button" value="angular7" (click)="clickMe($event)">
+      
+      <h1>Template referance variable #</h1>
+
+      <input type="text" #myInput>
+      <button (click)="logMe(myInput.value)">Go</button>
+
+      <h1>two way Binding [()]</h1>
+      <input type="text" [(ngModel)]= "anyThing" >{{anyThing}}
+    </div>
+  </div> -->
+  <div class="col-md-12">
+    <div class="row">
+      <app-mix-card [crd]="pqr" (crdEv) = "onClick($event)"></app-mix-card>
+      <app-mix-card [crd] ="{imgUrl:'https://www.traccar.org/images/server/feature-devices.svg',
+      title:'Database',
+      msg:'Traccar supports more protocols and device models than any other GPS tracking system on the market. You can select GPS trackers from a variety of vendors from low cost Chinese models to high-end quality brands.'}" (crdEv) = "onClick($event)" ></app-mix-card>
+    </div>
+
+  </div>
+<div class="row">
+  <div class="col-md-12">
+      <div class="alert alert-info">welcome to {{clkEvent}}</div>
+  </div>
+</div>
