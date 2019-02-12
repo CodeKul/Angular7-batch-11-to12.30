@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +16,8 @@ import { ViewchildComponent } from './viewchild/viewchild.component';
 import { ContentchildComponent } from './viewchild/contentchild.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { SampleDirective } from './directive/sample.directive';
+import { ObservableComponent } from './observable/observable.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +34,8 @@ import { SampleDirective } from './directive/sample.directive';
     ContentchildComponent,
     DirectiveComponent,
     SampleDirective,
+    ObservableComponent,
+    LifecycleComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +43,7 @@ import { SampleDirective } from './directive/sample.directive';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class AppModule { }

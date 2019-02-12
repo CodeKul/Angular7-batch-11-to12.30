@@ -4,7 +4,6 @@ import { Component, OnInit, ViewChild, ElementRef, ContentChild } from '@angular
   selector: 'app-contentchild',
   template: `
   <ng-content></ng-content>
-
     <p>
       contentchild works!
     </p>
@@ -18,7 +17,6 @@ export class ContentchildComponent implements OnInit {
 alContent : ElementRef;
   constructor() { 
   }
-
   ngOnInit() {
     console.log(this.alContent.nativeElement);
     

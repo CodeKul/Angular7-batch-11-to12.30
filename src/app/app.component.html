@@ -38,5 +38,12 @@
 
 <!-- <app-viewchild></app-viewchild> -->
 
-<app-directive></app-directive>
+<!-- <app-directive></app-directive> -->
+<!-- <app-observable></app-observable> -->
+<app-lifecycle *ngIf="isVs" [myDt]="this.title"></app-lifecycle>
+<div class="row">
+  <div class="col-md-12">
+    <input type ="button" class="btn" value="ok" (click)="onClick()">
+  </div>
+</div>
 </div>
