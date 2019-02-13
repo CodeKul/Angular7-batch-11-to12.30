@@ -10,9 +10,7 @@ export class LifecycleComponent implements OnChanges, OnInit,DoCheck, AfterConte
 myDt :string;
   constructor() { 
     console.log('im in constructor');
-    
   }
-
   ngOnChanges(sc){
     console.log('im in ngOnChanges');
     console.log(sc);
@@ -27,7 +25,6 @@ myDt :string;
   }
   ngAfterContentInit(){
     console.log('im in ngAfterContentInit');
-
   }
   ngAfterContentChecked(){
     console.log('im in ngAfterContentChecked');

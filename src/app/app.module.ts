@@ -18,6 +18,8 @@ import { DirectiveComponent } from './directive/directive.component';
 import { SampleDirective } from './directive/sample.directive';
 import { ObservableComponent } from './observable/observable.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { CustompipePipe } from './custompipe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +38,8 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
     SampleDirective,
     ObservableComponent,
     LifecycleComponent,
+    PipesComponent,
+    CustompipePipe,
   ],
   imports: [
     BrowserModule,
