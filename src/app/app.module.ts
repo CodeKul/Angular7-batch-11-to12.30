@@ -20,6 +20,9 @@ import { ObservableComponent } from './observable/observable.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { CustompipePipe } from './custompipe.pipe';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+    // import{componentRouting} from './app-routing.module'
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,11 +43,16 @@ import { CustompipePipe } from './custompipe.pipe';
     LifecycleComponent,
     PipesComponent,
     CustompipePipe,
+    EmployeeListComponent,
+    EmployeeDetailsComponent,
+    componentRouting
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],
