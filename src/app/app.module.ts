@@ -22,6 +22,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { CustompipePipe } from './custompipe.pipe';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
     // import{componentRouting} from './app-routing.module'
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
     CustompipePipe,
     EmployeeListComponent,
     EmployeeDetailsComponent,
-    componentRouting
+    ForgotPasswordComponent,
+    // componentRouting
 
   ],
   imports: [

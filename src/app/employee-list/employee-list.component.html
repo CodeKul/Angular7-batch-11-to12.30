@@ -1,3 +1,10 @@
-<p>
-  employee-list works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <input type="text" placeholder="enter user" #usNm ><input type="password"  #pass placeholder="enter password"><input type="button" class="btn btn-primary" value="login" (click)="login(usNm.value,pass.value)">
+    </div>
+  </div>
+  <div class="row">
+    <a [routerLink]="['forgot']" >Forgot password</a>
+  </div>
+</div>
