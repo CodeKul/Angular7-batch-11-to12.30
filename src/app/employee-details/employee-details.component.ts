@@ -16,17 +16,20 @@ export class EmployeeDetailsComponent implements OnInit ,OnDestroy{
   ) { }
 
   ngOnInit() {
-    //  this.usNm = this.activatedRoute.snapshot.params['usNm'];
-    this.activatedRoute.params.subscribe(newParam => {
-      this.abc = newParam['usNm']
-    })
+    //  this.usNm = this.activatedRoute.snapshot.params['usNm'];// reading variables using observable changes path but not welcome
+    // this.activatedRoute.params.subscribe(newParam => {
+    //   this.abc = newParam['usNm']
+    // }) //reading variables using observable changes welcome value and path
+      this.router.routerState.root.queryParams.subscribe(queryParamVar =>{
+        this.abc = queryParamVar['ver'] //to read query params
+      } )
   }
   ngOnDestroy(){
     this.sub.unsubscribe()
   }
   changeUsNm(chUsNm: string) {
     console.log(chUsNm);
-    // this.usNm = chUsNm
+    // this.usNm = chUsNm // reading variables using observable changes path but not welcome
     this.router.navigate(['employeedetails', chUsNm])
   }
 }

@@ -17,7 +17,13 @@ export class EmployeeListComponent implements OnInit {
     console.log(pass);
     // if (usNm === 'codekul' && pass === 'angular') {
     // }
-    this.router.navigate(['employeedetails',usNm])
+    this.router.navigate(['employeedetails',usNm],
+    {
+      queryParams :{
+        ver : 7
+      }
+    }
+    )
 
   }
 }
