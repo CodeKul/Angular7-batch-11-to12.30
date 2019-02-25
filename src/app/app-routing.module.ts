@@ -5,6 +5,7 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ChildOneComponent } from './employee-list/child-one.component';
 import { ChildTwoComponent } from './employee-list/child-two.component';
+import { GuardService } from './guard.service';
 
 const routes: Routes = [
   {
@@ -14,13 +15,11 @@ const routes: Routes = [
       { path: 'two', component: ChildTwoComponent }
     ]
   },
-  { path: 'employeedetails/:usNm', component: EmployeeDetailsComponent },
-  { path: 'forgot', component: ForgotPasswordComponent },
+  { path: 'employeedetails/:usNm', component: EmployeeDetailsComponent ,canActivate : [GuardService] },
+  { path: 'forgot', component: ForgotPasswordComponent,canActivate : [GuardService]  },
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-// const componentRouting = [EmployeeListComponent,EmployeeDetailsComponent]
