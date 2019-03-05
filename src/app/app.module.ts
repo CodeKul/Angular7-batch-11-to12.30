@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
@@ -28,6 +28,7 @@ import { ChildTwoComponent } from './employee-list/child-two.component';
 import { GuardService } from './guard.service';
 import { ServicesComponent } from './services/services.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     // import{componentRouting} from './app-routing.module'
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { HttpClientModule } from '@angular/common/http';
     ChildOneComponent,
     ChildTwoComponent,
     ServicesComponent,
+    ReactiveFormComponent,
     // componentRouting
 
   ],
@@ -62,7 +64,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule 
   ],
   providers: [GuardService],
   bootstrap: [AppComponent],
