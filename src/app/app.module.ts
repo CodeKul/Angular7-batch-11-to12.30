@@ -29,6 +29,7 @@ import { GuardService } from './guard.service';
 import { ServicesComponent } from './services/services.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
     // import{componentRouting} from './app-routing.module'
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     ChildTwoComponent,
     ServicesComponent,
     ReactiveFormComponent,
+    TemplateDrivenFormComponent,
     // componentRouting
 
   ],

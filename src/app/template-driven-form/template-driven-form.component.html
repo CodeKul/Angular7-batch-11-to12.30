@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="col-md-12">
+    <h1>Template driven Form</h1>
+    <form #myForm = ngForm  (ngSubmit)="onSubmit(myForm)">
+      <div class="form-group">
+        <input type="text" placeholder="first name"  name ="firstName" [(ngModel)] = "user.firstName">
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="last name"  name ="lastName" [(ngModel)] = "user.lastName">
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="enter your email"  name ="email" [(ngModel)] = "user.email">
+      </div>
+      <div class="form-group">
+        <input type="password" placeholder="enter your password"  name ="password" [(ngModel)] = "user.password">
+      </div>
+      <button class="btn btn-primary" >submit</button>
+    </form>
+  </div>
+</div>
