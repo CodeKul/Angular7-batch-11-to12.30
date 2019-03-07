@@ -1,20 +1,22 @@
 <div class="container">
   <div class="col-md-12">
     <h1>Signup Form</h1>
-    <form [formGroup]="signUpForm" >
+    <form [formGroup]="signUpForm">
       <div class="form-group">
-        <input type="text" placeholder="first name" formControlName= "firstName">
+        <input type="text" class="form-control" placeholder="first name" formControlName="firstName" [class.is-invalid]="signUpForm.get('firstName').invalid && signUpForm.get('firstName').touched">
       </div>
       <div class="form-group">
-        <input type="text" placeholder="last name" formControlName= "lastName">
+        <input type="text" placeholder="last name" formControlName="lastName" [ngClass]="{errorClass:(signUpForm.controls.lastName.invalid && (signUpForm.controls.lastName.touched || signUpForm.controls.lastName.dirty))}">
+        <p style="color:red" *ngIf="signUpForm.controls.lastName.invalid &&signUpForm.controls.lastName.touched">please enter last name</p>
+     
       </div>
       <div class="form-group">
-        <input type="email" placeholder="enter your email" formControlName= "email">
+        <input type="email" placeholder="enter your email" formControlName="email" [ngClass]="{errorClass:(signUpForm.controls.email.invalid && (signUpForm.controls.email.touched ||signUpForm.controls.email.dirty ))}">
       </div>
       <div class="form-group">
-        <input type="password"   maxlength="10" placeholder="enter your password" formControlName= "pass">
+        <input type="password" maxlength="10" placeholder="enter your password" formControlName="pass" [ngClass]="{errorClass:(signUpForm.controls.pass.invalid && (signUpForm.controls.pass.touched ||signUpForm.controls.pass.dirty ))}">
       </div>
-      <button class="btn btn-primary" (click)="submitData()">submit</button>
+      <button class="btn btn-primary" (click)="submitData()" [disabled]="!signUpForm.valid">submit</button>
     </form>
   </div>
 </div>

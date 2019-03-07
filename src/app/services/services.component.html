@@ -1,4 +1,5 @@
 <div class="container">
+  <h1>get()</h1>
   <div class="col-md-12">
     <ul>
       <!-- <li *ngFor = "let name of names">
@@ -13,4 +14,19 @@
 <!-- view for get method  -->
   {{joke }}
 
+<h1>post()</h1>
+    <div class="col-md-12">
+      <h4>Signup Form</h4>
+      <form [formGroup]="postDataForm">
+        <div class="form-group">
+          <input type="text"  placeholder=" name" formControlName="name" >
+        </div>
+        <div class="form-group">
+          <input type="text" placeholder="job" formControlName="job" >
+        </div>
+        <button class="btn btn-primary" (click)="submitPostData()" >submit</button>
+      </form>
+    </div>
+
 </div>
+

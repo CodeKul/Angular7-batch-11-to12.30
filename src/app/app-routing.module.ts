@@ -20,8 +20,8 @@ const routes: Routes = [
   // },
   { path: 'employeedetails/:usNm', component: EmployeeDetailsComponent, canActivate: [GuardService] },
   { path: 'forgot', component: ForgotPasswordComponent, canActivate: [GuardService] },
-  // {path : '', component:ServicesComponent },
-  {path :'',component:ReactiveFormComponent},
+  {path : '', component:ServicesComponent },
+  // {path :'',component:ReactiveFormComponent},
   // { path: '', component: TemplateDrivenFormComponent },
 ];
 @NgModule({
