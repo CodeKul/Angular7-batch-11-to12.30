@@ -1,5 +1,7 @@
+import { FruitsService } from './../fruits.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reactive-form',
@@ -9,7 +11,9 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class ReactiveFormComponent implements OnInit {
   signUpForm: FormGroup
   constructor(
+    private fruitsService:FruitsService,
     private fb: FormBuilder,
+    private router:Router
   ) { }
 
   ngOnInit() {
@@ -22,5 +26,10 @@ export class ReactiveFormComponent implements OnInit {
   }
   submitData(){
   console.log(this.signUpForm);
+  this.fruitsService.foo.next('abc');
+  this.router.navigate(['observe']);
+
   }
+
+
 }

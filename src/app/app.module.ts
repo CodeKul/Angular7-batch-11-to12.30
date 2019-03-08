@@ -30,6 +30,7 @@ import { ServicesComponent } from './services/services.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { AsynObservableComponent } from './asyn-observable/asyn-observable.component';
     // import{componentRouting} from './app-routing.module'
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
     ServicesComponent,
     ReactiveFormComponent,
     TemplateDrivenFormComponent,
+    AsynObservableComponent,
     // componentRouting
 
   ],

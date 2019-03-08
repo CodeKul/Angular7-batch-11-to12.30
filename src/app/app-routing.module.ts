@@ -9,6 +9,7 @@ import { GuardService } from './guard.service';
 import { ServicesComponent } from './services/services.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { AsynObservableComponent } from './asyn-observable/asyn-observable.component';
 
 const routes: Routes = [
   // {
@@ -20,9 +21,10 @@ const routes: Routes = [
   // },
   { path: 'employeedetails/:usNm', component: EmployeeDetailsComponent, canActivate: [GuardService] },
   { path: 'forgot', component: ForgotPasswordComponent, canActivate: [GuardService] },
-  {path : '', component:ServicesComponent },
-  // {path :'',component:ReactiveFormComponent},
+  // {path : '', component:ServicesComponent },
+  {path :'',component:ReactiveFormComponent},
   // { path: '', component: TemplateDrivenFormComponent },
+  {path:'observe',component:AsynObservableComponent}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
